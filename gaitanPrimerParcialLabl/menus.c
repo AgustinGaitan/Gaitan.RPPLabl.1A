@@ -64,7 +64,7 @@ int menuInformes()
     printf("14. Mostrar autos separados por partes mas sucias.\n");
     printf("15. Ordenar partes mas sucias posibles por mas tiempo.\n");
     printf("16. Mostrar autos con mas de 4 horas a dedicar\n");
-    printf("18.Salir.\n");
+    printf("17.Salir.\n");
     utn_getEntero(&opcion,3,"Ingrese la opcion que desea: ", "Error. Ingrese un numero valido.\n",1,20);
 
     return opcion;
