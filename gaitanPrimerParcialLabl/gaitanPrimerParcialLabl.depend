@@ -1,0 +1,333 @@
+# depslib dependency file v1.0
+1591402264 source:e:\proyectos\gaitanprimerparciallabl\gaitanprimerparciallabl\colores.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"colores.h"
+
+1590437303 source:e:\proyectos\gaitanprimerparciallabl\gaitanprimerparciallabl\fechas.c
+
+1593185983 source:e:\proyectos\gaitanprimerparciallabl\gaitanprimerparciallabl\marcas.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"marcas.h"
+
+1593046474 source:e:\proyectos\gaitanprimerparciallabl\gaitanprimerparciallabl\menus.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"menus.h"
+	"utn.h"
+
+1592992733 e:\proyectos\gaitanprimerparciallabl\gaitanprimerparciallabl\menus.h
+
+1593898730 source:e:\proyectos\gaitanprimerparciallabl\gaitanprimerparciallabl\servicios.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"servicios.h"
+	<ctype.h>
+
+1593910167 source:e:\proyectos\gaitanprimerparciallabl\gaitanprimerparciallabl\trabajos.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"trabajos.h"
+	"utn.h"
+
+1593182460 source:e:\proyectos\gaitanprimerparciallabl\gaitanprimerparciallabl\autos.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"autos.h"
+	"menus.h"
+	"utn.h"
+
+1592995241 e:\proyectos\gaitanprimerparciallabl\gaitanprimerparciallabl\autos.h
+	"marcas.h"
+	"colores.h"
+	"clientes.h"
+
+1593910678 source:e:\proyectos\gaitanprimerparciallabl\gaitanprimerparciallabl\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"autos.h"
+	"menus.h"
+	"fechas.h"
+	"marcas.h"
+	"servicios.h"
+	"trabajos.h"
+	"colores.h"
+	"informes.h"
+
+1592566131 e:\proyectos\gaitanprimerparciallabl\gaitanprimerparciallabl\fechas.h
+
+1593185263 e:\proyectos\gaitanprimerparciallabl\gaitanprimerparciallabl\marcas.h
+
+1593898593 e:\proyectos\gaitanprimerparciallabl\gaitanprimerparciallabl\servicios.h
+
+1593900204 e:\proyectos\gaitanprimerparciallabl\gaitanprimerparciallabl\trabajos.h
+	"servicios.h"
+	"marcas.h"
+	"colores.h"
+	"autos.h"
+	"clientes.h"
+
+1592992738 e:\proyectos\gaitanprimerparciallabl\gaitanprimerparciallabl\colores.h
+
+1591515979 source:e:\proyectos\gaitanprimerparciallabl\gaitanprimerparciallabl\utn.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<ctype.h>
+	"utn.h"
+
+1589209793 e:\proyectos\gaitanprimerparciallabl\gaitanprimerparciallabl\utn.h
+
+1593079419 e:\proyectos\gaitanprimerparciallabl\gaitanprimerparciallabl\clientes.h
+
+1593079404 source:e:\proyectos\gaitanprimerparciallabl\gaitanprimerparciallabl\clientes.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"clientes.h"
+
+1593910440 source:e:\proyectos\gaitanprimerparciallabl\gaitanprimerparciallabl\informes.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"informes.h"
+	"utn.h"
+
+1593909464 e:\proyectos\gaitanprimerparciallabl\gaitanprimerparciallabl\informes.h
+	"autos.h"
+	"colores.h"
+	"marcas.h"
+	"trabajos.h"
+
+1593182460 source:e:\proyectos\laboratoriorecuperatorio\gaitanprimerparciallabl\autos.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"autos.h"
+	"menus.h"
+	"utn.h"
+
+1592995241 e:\proyectos\laboratoriorecuperatorio\gaitanprimerparciallabl\autos.h
+	"marcas.h"
+	"colores.h"
+	"clientes.h"
+
+1593185263 e:\proyectos\laboratoriorecuperatorio\gaitanprimerparciallabl\marcas.h
+
+1592992738 e:\proyectos\laboratoriorecuperatorio\gaitanprimerparciallabl\colores.h
+
+1593079419 e:\proyectos\laboratoriorecuperatorio\gaitanprimerparciallabl\clientes.h
+
+1592992733 e:\proyectos\laboratoriorecuperatorio\gaitanprimerparciallabl\menus.h
+
+1589209793 e:\proyectos\laboratoriorecuperatorio\gaitanprimerparciallabl\utn.h
+
+1593079404 source:e:\proyectos\laboratoriorecuperatorio\gaitanprimerparciallabl\clientes.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"clientes.h"
+
+1591402264 source:e:\proyectos\laboratoriorecuperatorio\gaitanprimerparciallabl\colores.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"colores.h"
+
+1590437303 source:e:\proyectos\laboratoriorecuperatorio\gaitanprimerparciallabl\fechas.c
+
+1593910440 source:e:\proyectos\laboratoriorecuperatorio\gaitanprimerparciallabl\informes.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"informes.h"
+	"utn.h"
+
+1593909464 e:\proyectos\laboratoriorecuperatorio\gaitanprimerparciallabl\informes.h
+	"autos.h"
+	"colores.h"
+	"marcas.h"
+	"trabajos.h"
+
+1593900204 e:\proyectos\laboratoriorecuperatorio\gaitanprimerparciallabl\trabajos.h
+	"servicios.h"
+	"marcas.h"
+	"colores.h"
+	"autos.h"
+	"clientes.h"
+
+1593898593 e:\proyectos\laboratoriorecuperatorio\gaitanprimerparciallabl\servicios.h
+
+1593910678 source:e:\proyectos\laboratoriorecuperatorio\gaitanprimerparciallabl\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"autos.h"
+	"menus.h"
+	"fechas.h"
+	"marcas.h"
+	"servicios.h"
+	"trabajos.h"
+	"colores.h"
+	"informes.h"
+
+1592566131 e:\proyectos\laboratoriorecuperatorio\gaitanprimerparciallabl\fechas.h
+
+1593185983 source:e:\proyectos\laboratoriorecuperatorio\gaitanprimerparciallabl\marcas.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"marcas.h"
+
+1593046474 source:e:\proyectos\laboratoriorecuperatorio\gaitanprimerparciallabl\menus.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"menus.h"
+	"utn.h"
+
+1593898730 source:e:\proyectos\laboratoriorecuperatorio\gaitanprimerparciallabl\servicios.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"servicios.h"
+	<ctype.h>
+
+1593910167 source:e:\proyectos\laboratoriorecuperatorio\gaitanprimerparciallabl\trabajos.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"trabajos.h"
+	"utn.h"
+
+1591515979 source:e:\proyectos\laboratoriorecuperatorio\gaitanprimerparciallabl\utn.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<ctype.h>
+	"utn.h"
+
+1593182460 source:e:\proyectos\recuperatorio\gaitanprimerparciallabl\autos.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"autos.h"
+	"menus.h"
+	"utn.h"
+
+1594212864 e:\proyectos\recuperatorio\gaitanprimerparciallabl\autos.h
+	"marcas.h"
+	"colores.h"
+	"clientes.h"
+
+1593185263 e:\proyectos\recuperatorio\gaitanprimerparciallabl\marcas.h
+
+1592992738 e:\proyectos\recuperatorio\gaitanprimerparciallabl\colores.h
+
+1593079419 e:\proyectos\recuperatorio\gaitanprimerparciallabl\clientes.h
+
+1592992733 e:\proyectos\recuperatorio\gaitanprimerparciallabl\menus.h
+
+1589209793 e:\proyectos\recuperatorio\gaitanprimerparciallabl\utn.h
+
+1593079404 source:e:\proyectos\recuperatorio\gaitanprimerparciallabl\clientes.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"clientes.h"
+
+1591402264 source:e:\proyectos\recuperatorio\gaitanprimerparciallabl\colores.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"colores.h"
+
+1590437303 source:e:\proyectos\recuperatorio\gaitanprimerparciallabl\fechas.c
+
+1594214031 source:e:\proyectos\recuperatorio\gaitanprimerparciallabl\informes.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"informes.h"
+	"utn.h"
+	"suciedad.h"
+
+1594213121 e:\proyectos\recuperatorio\gaitanprimerparciallabl\informes.h
+	"autos.h"
+	"colores.h"
+	"marcas.h"
+	"trabajos.h"
+
+1593900204 e:\proyectos\recuperatorio\gaitanprimerparciallabl\trabajos.h
+	"servicios.h"
+	"marcas.h"
+	"colores.h"
+	"autos.h"
+	"clientes.h"
+
+1593898593 e:\proyectos\recuperatorio\gaitanprimerparciallabl\servicios.h
+
+1594214070 source:e:\proyectos\recuperatorio\gaitanprimerparciallabl\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"autos.h"
+	"menus.h"
+	"fechas.h"
+	"marcas.h"
+	"servicios.h"
+	"trabajos.h"
+	"colores.h"
+	"informes.h"
+	"suciedad.h"
+
+1592566131 e:\proyectos\recuperatorio\gaitanprimerparciallabl\fechas.h
+
+1593185983 source:e:\proyectos\recuperatorio\gaitanprimerparciallabl\marcas.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"marcas.h"
+
+1594213688 source:e:\proyectos\recuperatorio\gaitanprimerparciallabl\menus.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"menus.h"
+	"utn.h"
+
+1593898730 source:e:\proyectos\recuperatorio\gaitanprimerparciallabl\servicios.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"servicios.h"
+	<ctype.h>
+
+1593910167 source:e:\proyectos\recuperatorio\gaitanprimerparciallabl\trabajos.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"trabajos.h"
+	"utn.h"
+
+1591515979 source:e:\proyectos\recuperatorio\gaitanprimerparciallabl\utn.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<ctype.h>
+	"utn.h"
+
+1594213895 e:\proyectos\recuperatorio\gaitanprimerparciallabl\suciedad.h
+	"autos.h"
+	"marcas.h"
+	"colores.h"
+	"clientes.h"
+
