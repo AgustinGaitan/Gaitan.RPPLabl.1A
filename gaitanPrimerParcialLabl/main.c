@@ -245,8 +245,13 @@ int main()
                             case 16:
                                 mostrarAutoConMasHorasADedicar(listaSuciedad,TAMSUCIEDAD,listaAutos,TAMAUTO,listaClientes,TAMCLIENTE);
                                 break;
-
                             case 17:
+
+                                mostrarAutoConMenosHorasADedicar(listaSuciedad,TAMSUCIEDAD,listaAutos,TAMAUTO,listaClientes,TAMCLIENTE);
+                                break;
+
+
+                            case 18:
                                 printf("Desea salir? 's' para afirmar, 'n' para negar: ");
                                 fflush(stdin);
                                 scanf("%c", &confirmarInformes);

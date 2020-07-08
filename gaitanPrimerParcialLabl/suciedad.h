@@ -124,3 +124,14 @@ void mostrarSuciedadesOrdenadasPorHora(eSuciedad* listaSuciedad, int tamSuciedad
 
 
 void mostrarAutoConMasHorasADedicar(eSuciedad* listaSuciedad, int tamSuciedad, eAuto* listaAutos, int tamAutos, eCliente* listaClientes, int tamClientes);
+
+/** \brief muestra el auto al que hay que dedicarle menos horas
+ *
+ * \param lista de partes mas sucias
+ * \param tamaño del array
+ *\param lista de autos
+ *\param tamaño del array de autos
+ *
+ */
+
+void mostrarAutoConMenosHorasADedicar(eSuciedad* listaSuciedad, int tamSuciedad, eAuto* listaAutos, int tamAutos, eCliente* listaClientes, int tamClientes);

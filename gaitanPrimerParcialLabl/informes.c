@@ -857,7 +857,54 @@ void mostrarAutoConMasHorasADedicar(eSuciedad* listaSuciedad, int tamSuciedad, e
 
 
 
+void mostrarAutoConMenosHorasADedicar(eSuciedad* listaSuciedad, int tamSuciedad, eAuto* listaAutos, int tamAutos, eCliente* listaClientes, int tamClientes)
+{
 
+ system("cls");
+    int encontrado = 0;
+
+
+        printf("Patente    Nombre del cliente    Parte a limpiar\n\n");
+
+        for(int i = 0 ; i < tamAutos; i++)
+        {
+
+                if(listaAutos[i].idSuciedad == 1 || listaAutos[i].idSuciedad == 2)
+                {
+
+
+                    mostrarAutoSucio(listaAutos[i],listaSuciedad,tamSuciedad,listaClientes,tamClientes);
+
+
+
+                    encontrado = 1;
+
+
+                }
+
+
+            }
+
+
+        if(encontrado)
+        {
+
+            printf("Estos son los autos a los cuales hay que dedicarle 4  horas o menos.\n\n");
+
+        }
+        if(!(encontrado))
+        {
+
+            printf("No se encontraron autos.\n\n");
+
+
+        }
+
+
+
+
+
+}
 
 
 
