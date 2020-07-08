@@ -73,7 +73,7 @@ int buscarAutoPorPatente(eAuto* listaAutos, char* patente, int tamAutos);
  */
 
 
-int altaAuto(eAuto* listaAutos, int idAutos, int tamAutos, eMarca* listaMarcas, int tamMarcas, eColor* listaColores, int tamColores,eCliente* listaClientes, int tamClientes, int idClientes);
+int altaAuto(eAuto* listaAutos, int idAutos, int tamAutos, eMarca* listaMarcas, int tamMarcas, eColor* listaColores, int tamColores,eCliente* listaClientes, int tamClientes);
 
 /** \brief modificar un auto ya cargado
  *

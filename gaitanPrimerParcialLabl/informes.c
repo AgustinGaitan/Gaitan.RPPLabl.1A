@@ -158,7 +158,7 @@ void informarAutosSeparadosMarca(eAuto* listaAutos,int tamAutos,eColor* listaCol
             for(int j = 0; j < tamAutos; j++)
             {
 
-                if(!(listaAutos[i].isEmpty) && listaAutos[j].idMarca == listaMarcas[i].id)
+                if(!(listaAutos[j].isEmpty) && listaAutos[j].idMarca == listaMarcas[i].id)
                 {
 
                     mostrarAuto(listaAutos[j],listaMarcas,tamMarcas,listaColores,tamColores,listaClientes,tamClientes);
@@ -575,7 +575,7 @@ void mostrarSuciedad(eSuciedad listaSuciedad)
 
 
 
-    printf("%d    %-10s", listaSuciedad.id, listaSuciedad.descripcion);
+    printf(" %d       %-10s        %d hs\n", listaSuciedad.id, listaSuciedad.descripcion, listaSuciedad.duracion);
 
 
 }
@@ -585,10 +585,10 @@ void mostrarSuciedades(eSuciedad* listaSuciedad, int tamSuciedad)
 {
     system("cls");
     printf("**** Listado de partes sucias posibles ****\n\n");
-    printf(" ID     Descripcion\n\n");
+    printf(" ID     Descripcion   Tiempo a dedicar \n\n");
     for(int i = 0 ; i < tamSuciedad; i++)
     {
-        printf(" %d   %-10s\n", listaSuciedad[i].id ,listaSuciedad[i].descripcion);
+        mostrarSuciedad(listaSuciedad[i]);
     }
     printf("\n\n");
 
@@ -710,6 +710,150 @@ void mostrarAutosConSuciedad(eSuciedad* listaSuciedad, int tamSuciedad, eAuto* l
     }
 
 }
+
+
+
+void mostrarAutosSeparadosPorSuciedad(eSuciedad* listaSuciedad, int tamSuciedad, eAuto* listaAutos, int tamAutos, eCliente* listaClientes, int tamClientes)
+{
+
+
+     system("cls");
+
+     char descSuciedad[20];
+     int encontrado;
+
+    printf("*** Lista de autos separados por parte mas sucia****\n\n");
+
+     for(int i = 0; i < tamSuciedad; i++)
+     {
+            encontrado = 0;
+
+             printf("*********************************************************\n");
+
+             printf("Patente    Nombre del cliente    Parte a limpiar\n\n");
+
+            for(int j = 0; j < tamAutos; j++)
+            {
+
+                if(!(listaAutos[j].isEmpty) && listaAutos[j].idSuciedad == listaSuciedad[i].id)
+                {
+
+                    mostrarAutoSucio(listaAutos[j],listaSuciedad,tamSuciedad,listaClientes,tamClientes);
+
+                    encontrado = 1;
+
+                }
+
+
+            }
+
+           if(!encontrado)
+            {
+                cargarDescripcionSuciedad(descSuciedad,listaSuciedad[i].id,listaSuciedad,tamSuciedad);
+
+                printf("***** No hay autos que la parte mas sucia sea  %s *****\n\n", descSuciedad);
+            }
+
+
+     }
+
+
+
+}
+
+
+
+
+
+
+void mostrarSuciedadesOrdenadasPorHora(eSuciedad* listaSuciedad, int tamSuciedad, eAuto* listaAutos, int tamAutos)
+{
+
+
+    eSuciedad aux;
+
+        for(int i = 0; i < tamSuciedad -1 ; i++)
+        {
+
+
+            for(int j = i+1; j < tamSuciedad; j++)
+            {
+
+
+                      if( listaSuciedad[i].duracion < listaSuciedad[j].duracion)
+                        {
+                            aux = listaSuciedad[i];
+                            listaSuciedad[i] = listaSuciedad[j];
+                            listaSuciedad[j] = aux;
+                        }
+                        else if( listaSuciedad[i].duracion == listaSuciedad[j].duracion)
+                        {
+
+                                    aux = listaSuciedad[i];
+                                    listaSuciedad[i] = listaSuciedad[j];
+                                    listaSuciedad[j] = aux;
+
+
+                        }
+
+
+
+            }
+
+
+        }
+
+
+
+}
+
+
+void mostrarAutoConMasHorasADedicar(eSuciedad* listaSuciedad, int tamSuciedad, eAuto* listaAutos, int tamAutos, eCliente* listaClientes, int tamClientes)
+{
+    system("cls");
+    int encontrado = 0;
+
+
+        printf("Patente    Nombre del cliente    Parte a limpiar\n\n");
+
+        for(int i = 0 ; i < tamAutos; i++)
+        {
+
+                if(listaAutos[i].idSuciedad == 5 || listaAutos[i].idSuciedad == 4 || listaAutos[i].idSuciedad == 3)
+                {
+
+
+                    mostrarAutoSucio(listaAutos[i],listaSuciedad,tamSuciedad,listaClientes,tamClientes);
+
+
+
+                    encontrado = 1;
+
+
+                }
+
+
+            }
+
+
+        if(encontrado)
+        {
+
+            printf("Estos son los autos a los cuales hay que dedicarle mas de 4 horas.\n\n");
+
+        }
+        if(!(encontrado))
+        {
+
+            printf("No se encontraron autos con trabajos largos.\n\n");
+
+
+        }
+
+
+
+}
+
 
 
 

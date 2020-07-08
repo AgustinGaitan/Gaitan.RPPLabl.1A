@@ -163,13 +163,12 @@ void informarImporteAuto(eAuto* listaAutos, int tamAuto,eTrabajo* listaTrabajos,
 
 void informarServicioRealizadoAuto(eAuto* listaAutos, int tamAuto,eTrabajo* listaTrabajos, int tamTrabajos,eServicio* listaServicios, int tamServicios);
 
-/** \brief Informa los servicios dados en una fecha ingresada
+/** \brief informa los servicios en una fecha a ingresar
  *
  * \param lista de trabajos
- * \param  tamaño del array de trabajos
- * \param  lista de servicios
- * \param  tamaño del array de servicios
- * \return
+ * \param tamaño del array de trabajos
+ * \param lista de servicios
+ * \param tamaño del array de servicios
  *
  */
 

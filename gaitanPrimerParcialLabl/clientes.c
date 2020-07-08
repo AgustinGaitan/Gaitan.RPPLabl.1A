@@ -3,18 +3,6 @@
 #include <string.h>
 #include "clientes.h"
 
-void inicializarClientes(eCliente* listaClientes, int tamClientes)
-{
-
-    for(int i = 0; i < tamClientes; i++)
-    {
-
-        listaClientes[i].isEmpty = 1;
-
-    }
-
-
-}
 
 int cargarNombreCliente(char* nombre, int idPersona, eCliente* listaClientes, int tamClientes)
 {
@@ -40,3 +28,32 @@ int cargarNombreCliente(char* nombre, int idPersona, eCliente* listaClientes, in
 
 
 }
+
+void mostrarClientes(eCliente* listaClientes, int tamClientes)
+{
+    system("cls");
+    printf("**** Lista de Clientes****\n\n");
+    printf("Id       Nombre       Sexo\n\n");
+
+    for(int i = 0; i < tamClientes; i++)
+    {
+        if(listaClientes[i].id > 0)
+        {
+            mostrarCliente(listaClientes[i]);
+
+
+        }
+    }
+}
+
+void mostrarCliente(eCliente listaClientes)
+{
+
+
+
+	printf("%d       %-10s        %c\n", listaClientes.id, listaClientes.nombre, listaClientes.sexo);
+
+
+}
+
+

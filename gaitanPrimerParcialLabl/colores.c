@@ -36,10 +36,21 @@ void mostrarColores(eColor* listaColores, int tamColores)
     printf(" ID     Color\n\n");
     for(int i = 0 ; i < tamColores; i++)
     {
-        printf(" %d   %-10s\n", listaColores[i].id, listaColores[i].descripcion);
+        mostrarColor(listaColores[i]);
     }
     printf("\n\n");
 
+
+
+}
+
+
+void mostrarColor(eColor listaColores)
+{
+
+
+
+	printf(" %d   %-10s\n", listaColores.id, listaColores.descripcion);
 
 
 }

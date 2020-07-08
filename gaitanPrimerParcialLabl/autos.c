@@ -55,10 +55,10 @@ int buscarAutoPorPatente(eAuto* listaAutos, char* patente, int tamAutos)
 
 
 
-int altaAuto(eAuto* listaAutos, int idAutos, int tamAutos, eMarca* listaMarcas, int tamMarcas, eColor* listaColores, int tamColores,eCliente* listaClientes, int tamClientes, int idClientes)
+int altaAuto(eAuto* listaAutos, int idAutos, int tamAutos, eMarca* listaMarcas, int tamMarcas, eColor* listaColores, int tamColores,eCliente* listaClientes, int tamClientes)
 {
     system("cls");
-    //eAuto auxAuto;
+    eAuto auxAuto;
     int todoOk = 0;
     int indice = buscarLibreAuto(listaAutos,tamAutos);
 
@@ -74,40 +74,54 @@ int altaAuto(eAuto* listaAutos, int idAutos, int tamAutos, eMarca* listaMarcas, 
 
 
 
-             utn_getCadena(listaAutos[indice].patente, 6, 4 , "Ingrese la patente del auto (sin espacios): ", "Error. Ingreso una patente invalida\n");
-            system("cls");
-
-            printf("Las marcas disponibles son las siguientes: \n");
-            mostrarMarcas(listaMarcas,tamMarcas);
+            if(!( utn_getCadena(auxAuto.patente, 6, 4 , "Ingrese la patente del auto (sin espacios): ", "Error. Ingreso una patente invalida\n")))
+            {
 
 
-            utn_getEntero(&listaAutos[indice].idMarca, 4, "Ingrese el ID de la marca que desea: ", "Error. Ingrese un id valido.\n", 1000, 1004);
-            system("cls");
+                system("cls");
 
-            printf("Los colores disponibles son los siguientes: \n");
-            mostrarColores(listaColores, tamColores);
-
-
-            utn_getEntero(&listaAutos[indice].idColor, 4, "Ingrese el ID del color que desea: ", "Error. Ingrese un id valido.\n", 5000,5004);
-            system("cls");
+                printf("Las marcas disponibles son las siguientes: \n");
+                mostrarMarcas(listaMarcas,tamMarcas);
 
 
-            utn_getEntero(&listaAutos[indice].modelo, 4, "Ingrese el modelo del vehiculo (1950-2020): ", "Error. Ingrese un modelo valido (1950-2020)\n", 1950, 2020);
+               if(!(utn_getEntero(&auxAuto.idMarca, 4, "Ingrese el ID de la marca que desea: ", "Error. Ingrese un id valido.\n", 1000, 1004)))
+               {
 
-            system("cls");
-            utn_getCadena(listaClientes[indice].nombre, 20 , 4, "Ingrese el nombre del cliente:  ", "Error. Ingreso un nombre valido\n");
-            system("cls");
 
-            printf("Ingrese el sexo 'm' // 'f': ");
-            fflush(stdin);
-            scanf("%c", &listaClientes[indice].sexo);
+                    system("cls");
 
-            listaAutos[indice].isEmpty = 0;
-            listaAutos[indice].id = idAutos;
-            listaClientes[indice].id = idClientes;
-            listaClientes[indice].isEmpty = 0;
-            listaAutos[indice].idCliente = idClientes;
-            todoOk = 1;
+                    printf("Los colores disponibles son los siguientes: \n");
+                    mostrarColores(listaColores, tamColores);
+
+
+                    if(!(utn_getEntero(&auxAuto.idColor, 4, "Ingrese el ID del color que desea: ", "Error. Ingrese un id valido.\n", 5000,5004)))
+                    {
+
+
+                        system("cls");
+
+
+                        if(!(utn_getEntero(&auxAuto.modelo, 4, "Ingrese el modelo del vehiculo (1950-2020): ", "Error. Ingrese un modelo valido (1950-2020)\n", 1950, 2020)))
+                        {
+
+
+                            system("cls");
+                            mostrarClientes(listaClientes,tamClientes);
+                            if(!(utn_getEntero(&auxAuto.idCliente,2,"Ingrese el ID del cliente al que desea asignarle el vehiculo: ","Error. Ingrese un ID valido\n",1,10)))
+                            {
+
+                                auxAuto.isEmpty = 0;
+                                auxAuto.id = idAutos;
+                                listaAutos[indice] = auxAuto;
+                                todoOk = 1;
+                            }
+
+                        }
+                    }
+
+               }
+
+            }
 
     }
 
@@ -195,7 +209,6 @@ void bajaAuto(eAuto* listaAutos, int tamAutos, eMarca* listaMarcas, int tamMarca
             if(strcmp(listaAutos[indice].patente, auxAuto.patente) == 0)
             {
                 listaAutos[indice].isEmpty = 1;
-                listaClientes[indice].isEmpty = 1;
                 break;
             }
         }

@@ -40,3 +40,16 @@ int cargarDescripcionColor(char* descripcion, int idColor, eColor* listaColores,
 
 
 void mostrarColores(eColor* listaColores, int tamColores);
+
+
+
+
+/** \brief muestra un solo color
+ *
+ * \param lista de colores
+ */
+
+
+
+ void mostrarColor(eColor listaColores);
+

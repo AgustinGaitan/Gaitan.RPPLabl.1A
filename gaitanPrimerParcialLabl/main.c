@@ -27,9 +27,9 @@ int main()
     {1,"a1",1000,5000,1995,0,1,1},
     {2,"z2",1000,5003,1993,0,2,2},
     {3,"k9",1004,5004,2005,0,3,4},
-    {4,"h3",1004,5001,2007,0,4,5},
+    {4,"h3",1004,5001,2007,0,4,4},
     {5,"y9",1000,5000,1995,0,5,1},
-    {6,"l5",1001,5000,2019,0,6,2},
+    {6,"l5",1001,5000,2019,0,6,5},
     {7,"b5",1000,5003,2015,0,7,3}};
 
 
@@ -43,17 +43,24 @@ int main()
     {3,"h3",20001,{23,6,2020},0},
     {4,"y9",20003,{25,6,2020},0},
     {5,"k9",20003,{26,6,2020},0},
-    {6,"l5",20001,{26,6,2020},0}};
+    {6,"l5",20001,{26,6,2020},0},
+    {7,"b5",20000,{27,7,2020},0}};
+
+
 
     eCliente listaClientes[TAMCLIENTE] = {
-    {1,"Juan",'m',0},
-    {2,"Roberto",'m',0},
-    {3,"Alejandra",'f',0},
-    {4,"Karen",'f',0},
-    {5,"Jorge",'m',0},
-    {6,"Clara",'f',0}};
+    {1,"Juan",'m',},
+    {2,"Roberto",'m'},
+    {3,"Alejandra",'f'},
+    {4,"Karen",'f'},
+    {5,"Jorge",'m'},
+    {6,"Clara",'f'},
+    {7,"Carla",'f'},
+    {8,"Alberto",'f'},
+    {9,"Diaz",'f'},
+    {10,"Mauro",'f'}};
 
-    eSuciedad listaSuciedad[TAMSUCIEDAD] ={{1,"Asientos"},{2,"Ruedas"},{3,"Vidrios"},{4,"Llantas"},{5,"Motor"}};
+    eSuciedad listaSuciedad[TAMSUCIEDAD] ={{1,"Asientos",4},{2,"Ruedas",2},{3,"Vidrios",5},{4,"Llantas",5},{5,"Motor",12}};
 
 
 
@@ -62,14 +69,25 @@ int main()
     char confirmar;
     char confirmarInformes;
     int idAuto = 0;
-    int flag = 1;              //CAMBIAR LA FLAG CAMBIAR LA FLAG CAMBIAR LA FLAG CAMBIAR LA FLAG CAMBIAR LA FLAG CAMBIAR LA FLAG CAMBIAR LA FLAG CAMBIAR LA FLAG CAMBIAR LA FLAG
+    int flag = 1;              //CAMBIAR LA FLAG CAMBIAR SI NO SE HARDCODEA
     int idTrabajo = 0;
-    int idCliente = 0;
     eMarcaMasElegida marcaElegida[TAMMARCA];
 
-    //inicializarAutos(listaAutos,TAMAUTO); //SACAR HARDCODEO
-   //inicializarTrabajos(listaTrabajos,TAMTRABAJO); //SACAR HARDCODEO
-   //inicializarClientes(listaClientes,TAMCLIENTE); //SACAR HARDCODEO
+    inicializarAutos(listaAutos,TAMAUTO);
+   inicializarTrabajos(listaTrabajos,TAMTRABAJO);
+
+    for(int i = 0; i < 7; i++)  //no inicializa los hardcodeados
+    {
+
+        listaAutos[i].isEmpty = 0;
+
+    }
+      for(int j = 0; j < 7; j++)   //no inicializa los hardcodeados
+    {
+
+        listaTrabajos[j].isEmpty = 0;
+
+    }
 
     do
     {
@@ -80,8 +98,7 @@ int main()
             case 'a':
 
                     idAuto++;
-                    idCliente++;
-                    if(altaAuto(listaAutos,idAuto,TAMAUTO,listaMarcas,TAMMARCA,listaColores,TAMCOLOR,listaClientes,TAMCLIENTE,idCliente))
+                    if(altaAuto(listaAutos,idAuto,TAMAUTO,listaMarcas,TAMMARCA,listaColores,TAMCOLOR,listaClientes,TAMCLIENTE))
                     {
                         flag = 1;
                     }
@@ -215,8 +232,21 @@ int main()
 
                                 mostrarAutosConSuciedad(listaSuciedad,TAMSUCIEDAD,listaAutos,TAMAUTO,listaClientes,TAMCLIENTE);
                                 break;
-
                             case 14:
+                                mostrarAutosSeparadosPorSuciedad(listaSuciedad,TAMSUCIEDAD,listaAutos,TAMAUTO,listaClientes,TAMCLIENTE);
+                                break;
+
+                            case 15:
+
+                                mostrarSuciedadesOrdenadasPorHora(listaSuciedad,TAMSUCIEDAD,listaAutos,TAMAUTO);
+                                mostrarSuciedades(listaSuciedad, TAMSUCIEDAD);
+
+                                break;
+                            case 16:
+                                mostrarAutoConMasHorasADedicar(listaSuciedad,TAMSUCIEDAD,listaAutos,TAMAUTO,listaClientes,TAMCLIENTE);
+                                break;
+
+                            case 17:
                                 printf("Desea salir? 's' para afirmar, 'n' para negar: ");
                                 fflush(stdin);
                                 scanf("%c", &confirmarInformes);

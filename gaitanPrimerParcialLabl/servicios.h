@@ -41,6 +41,11 @@ int cargarDescripcionServicio(char* descripcion, int idServicio, eServicio* list
 
 
 
+/** \brief muestra un solo servicio
+ *
+ * \param lista de servicios
+ *
+ */
 
 
 

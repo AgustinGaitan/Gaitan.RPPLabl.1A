@@ -39,8 +39,23 @@ int cargarDescripcionMarca(char* descripcion, int idMarca, eMarca* listaMarcas, 
 
 void mostrarMarcas(eMarca* listaMarcas, int tamMarcas);
 
+/** \brief muestra una sola marca
+ *
+ * \param lista de marcas
+ *
+ */
 
 void mostrarMarca(eMarca listaMarcas);
+
+/** \brief busca marcas por id
+ *
+ * \param lista de marcas
+ * \param  tamaño del array de marcas
+ * \param id de la marca
+ * \return (-1) si hubo error o no se encontro (indice) si se encontro
+ *
+ */
+
 
 int buscarMarcasId(eMarca* listaMarcas, int tamMarcas, int id);
 

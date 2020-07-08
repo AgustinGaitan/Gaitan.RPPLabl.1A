@@ -20,7 +20,7 @@ char menu()
     printf("i.Listar trabajos.\n");
     printf("j.Informes.\n");
     printf("k.Salir.\n\n");
-    printf("Ingrese la opcion que desea: ");
+    printf("Ingrese la opcion que desea (en minusculas): ");
     fflush(stdin);
     scanf("%c", &opcion);
 
@@ -58,11 +58,14 @@ int menuInformes()
     printf("8.Suma de importes de un auto a seleccionar.\n");
     printf("9.Mostrar los autos al que se le dio un servicio a seleccionar.\n");
     printf("10.Mostrar servicios realizados en una fecha a ingresar.\n");
-    printf("11. Mostrar la lista de suciedades posibles.\n");
-    printf("12. Asignarle parte a limpiar a un vehiculo.\n");
-    printf("13. Mostrar vehiculos con partes a limpiar asignadas.\n");
-    printf("11.Salir.\n");
-    utn_getEntero(&opcion,3,"Ingrese la opcion que desea: ", "Error. Ingrese un numero valido.\n",1,16);
+    printf("11. Mostrar la lista de partes mas sucias posibles.\n");
+    printf("12. Asignarle parte mas sucia a un auto.\n");
+    printf("13. Mostrar autos con partes mas sucias asignadas.\n");
+    printf("14. Mostrar autos separados por partes mas sucias.\n");
+    printf("15. Ordenar partes mas sucias posibles por mas tiempo.\n");
+    printf("16. Mostrar autos con mas de 4 horas a dedicar\n");
+    printf("18.Salir.\n");
+    utn_getEntero(&opcion,3,"Ingrese la opcion que desea: ", "Error. Ingrese un numero valido.\n",1,20);
 
     return opcion;
 
